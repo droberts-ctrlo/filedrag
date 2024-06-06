@@ -1,6 +1,6 @@
 {
   "name": "@davetheitguy/filedrag",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "dependencies": {
     "@davetheitguy/common": "^1.0.4",
