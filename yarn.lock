@@ -1005,10 +1005,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@davetheitguy/common@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@davetheitguy/common/-/common-1.0.4.tgz#62a55352e885c4b864367cd0e6c02555f9e3672c"
-  integrity sha512-STE6inxvIfgXeVPndOmA2IgArDkhEjHd5+AM7rPim+SMmoZCx54KTy6oXpFEDqbfl2r2Taf+3wm4Q5cbA0FAWA==
+"@davetheitguy/common@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@davetheitguy/common/-/common-1.0.6.tgz#16d37c2c88d8334d70ccb80d0c9411d0727823d8"
+  integrity sha512-X5bW+kKTtZ1nsSL2c9GE1PUbcIRCmavzPaXx9JUWmT7n7zlMkKDpHZXh46jirQN1BAuWaB6crX1L957yo+57xQ==
   dependencies:
     jquery "^3.7.1"
 

@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "license": "MIT",
   "dependencies": {
-    "@davetheitguy/common": "^1.0.4",
+    "@davetheitguy/common": "^1.0.6",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
@@ -22,7 +22,8 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prepublish": "tsc"
   },
   "module": "dist/index.js",
   "types": "dist/index.d.ts"
