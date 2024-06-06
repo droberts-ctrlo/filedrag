@@ -1,4 +1,4 @@
-#File drag module
+#File drag module [![JS Tests](https://github.com/droberts-ctrlo/filedrag/actions/workflows/tests.yml/badge.svg)](https://github.com/droberts-ctrlo/filedrag/actions/workflows/tests.yml)
 
 This module allows for simple drag and drop functionality for files. It is a simple module that allows for the user to drag and drop files into a designated area. This module is useful for any application that requires the user to upload files.
 
