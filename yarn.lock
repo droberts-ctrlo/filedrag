@@ -1012,6 +1012,23 @@
   dependencies:
     jquery "^3.7.1"
 
+"@davetheitguy/common@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@davetheitguy/common/-/common-1.0.8.tgz#aedc524a96f50b75ed5fbebbe9b37e615603c195"
+  integrity sha512-wRtK8OH8J0MlEKV3/kLzsXsDpAjdXgFntOTU/vQalwUXlM45Av04aQNjxl1pLjZUTj1GeHlCKwwaxqixuoXr3w==
+  dependencies:
+    "@davetheitguy/common" "^1.0.6"
+    "@davetheitguy/markdown-formatter" "^1.0.6"
+    jquery "^3.7.1"
+
+"@davetheitguy/markdown-formatter@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@davetheitguy/markdown-formatter/-/markdown-formatter-1.0.6.tgz#a017e0c3714bdbf71ea3831606fe05a66ea52d89"
+  integrity sha512-TWki95j7E0HlMJrXUceJBfn3d/+lhB5RqK1wSMj47be5mUkcq44+W+wziyVJ+zAARJAg74nKhcKuihNBoEwMyg==
+  dependencies:
+    eslint "9.x"
+    marked "^12.0.2"
+
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -3127,6 +3144,11 @@ makeerror@1.0.12:
   integrity sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==
   dependencies:
     tmpl "1.0.5"
+
+marked@^12.0.2:
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-12.0.2.tgz#b31578fe608b599944c69807b00f18edab84647e"
+  integrity sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==
 
 merge-stream@^2.0.0:
   version "2.0.0"
