@@ -1,5 +1,5 @@
 import FileDrag from './filedrag';
-import { describe, it, expect, jest } from "@jest/globals";
+import {describe,it,expect,vi} from 'vitest';
 
 class FileDragTest extends FileDrag {
     constructor(element: JQuery | HTMLElement, onDrop: (file: FileList | File) => any = () => { }) {
@@ -102,7 +102,7 @@ describe('FileDrag class tests', () => {
 
     it('triggers the event as expected when a file is dropped', () => {
         const child = createBaseDOM();
-        const dropFunction = jest.fn((files: File) => {
+        const dropFunction = vi.fn((files: File) => {
             const myFile = files;
             expect(myFile).toBeDefined();
             expect(myFile.name).toBe('test.txt');
