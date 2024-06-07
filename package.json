@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@davetheitguy/common": "^1.0.6",
+    "@davetheitguy/common": "^1.0.9",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
@@ -21,9 +21,11 @@
     "vitest": "^1.6.0"
   },
   "scripts": {
+    "test": "vitest",
     "lint": "eslint src",
     "prepublish": "tsc"
   },
   "module": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js"
 }

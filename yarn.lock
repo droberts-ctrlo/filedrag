@@ -993,10 +993,10 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@davetheitguy/common@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@davetheitguy/common/-/common-1.0.6.tgz#16d37c2c88d8334d70ccb80d0c9411d0727823d8"
-  integrity sha512-X5bW+kKTtZ1nsSL2c9GE1PUbcIRCmavzPaXx9JUWmT7n7zlMkKDpHZXh46jirQN1BAuWaB6crX1L957yo+57xQ==
+"@davetheitguy/common@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@davetheitguy/common/-/common-1.0.9.tgz#065fc7336d9ffa685966ec8daa945c97bbd9080e"
+  integrity sha512-gK2HPv602iHja0eKO0Ld6aMpKnWWLBqiZDiRe//yCJ1ZaARofeD9pTn23OiyuAN4QfOVKnq15ytOzZy9hx925A==
   dependencies:
     jquery "^3.7.1"
 

@@ -1,6 +1,14 @@
 import FileDrag from './filedrag';
 import {describe,it,expect,vi} from 'vitest';
 
+declare global {
+    interface Window {
+        $: JQueryStatic;
+    }
+};
+
+window.$ = window.$ || require('jquery');
+
 class FileDragTest extends FileDrag {
     constructor(element: JQuery | HTMLElement, onDrop: (file: FileList | File) => any = () => { }) {
         super(element, { debug: true }, onDrop);
