@@ -1,11 +1,5 @@
-import {
-    addClass,
-    ElementOrJQueryElement,
-    hideElement,
-    removeClass,
-    showElement,
-    stopPropagation
-} from "@davetheitguy/common";
+import { stopPropagation } from "@davetheitguy/common";
+import { addClass, removeClass, hideElement, showElement } from "./wrapper/JQueryWrapper";
 
 export interface FileDragOptions {
     debug?: boolean;
@@ -22,7 +16,7 @@ class FileDrag {
      * @param options Options for the filedrag
      * @param onDrop The function to call when files are dropped
      */
-    constructor(element: ElementOrJQueryElement, private options: FileDragOptions = {}, private onDrop: (files: FileList | File) => void) {
+    constructor(element: HTMLElement | JQuery<HTMLElement>, private options: FileDragOptions = {}, private onDrop: (files: FileList | File) => void) {
         if (options.debug) console.log('FileDrag', element, options);
         this.el = element instanceof HTMLElement ? $(element) : element;
         this.initElements()
@@ -37,20 +31,22 @@ class FileDrag {
         if (this.options.debug) console.log('initElementEvents');
         this.dropZone!.on('dragenter', (e) => {
             if (!this.dragging) return;
-            addClass(this.dropZone!, 'dragging');
-            stopPropagation(e);
+            addClass(this.dropZone, 'dragging');
+            stopPropagation(<any>e);
         });
         this.dropZone!.on('dragleave', (e) => {
             if (!this.dragging) return;
-            removeClass(this.dropZone!, 'dragging');
-            stopPropagation(e);
+            removeClass(this.dropZone, 'dragging');
+            stopPropagation(<any>e);
         });
         this.dropZone!.on('drop', (e) => {
             if (!this.dragging) return;
             this.dragging = false;
             removeClass(this.el, 'dragging');
-            hideElement($('.drop-zone'));
-            showElement($('[data-draggable="true"]'));
+            const zone = $('.drop-zone');
+            hideElement(zone);
+            const draggable = $('[data-draggable=true]');
+            showElement(draggable);
             if (this.options.debug) console.log(e.originalEvent!.dataTransfer!.files);
             showElement(this.el);
             console.log(e.originalEvent!.dataTransfer!.files);
@@ -60,7 +56,7 @@ class FileDrag {
                 this.onDrop(e.originalEvent!.dataTransfer!.files[0]);
             }
             $(document).trigger('drop');
-            stopPropagation(e);
+            stopPropagation(<any>e);
         });
     }
 
@@ -73,7 +69,7 @@ class FileDrag {
             if (this.dragging) return;
             this.dragging = true;
             hideElement(this.el);
-            showElement(this.dropZone!);
+            showElement(this.dropZone);
         });
         $(document).on('dragleave', (e) => {
             if (!this.dragging) return;
@@ -81,19 +77,19 @@ class FileDrag {
                 return false;
             }
             this.dragging = false;
-            hideElement(this.dropZone!);
+            hideElement(this.dropZone);
             showElement(this.el);
         });
         $(document).on('drop', (e) => {
             if (!this.dragging) return;
             this.dragging = false;
-            hideElement(this.dropZone!);
+            hideElement(this.dropZone);
             showElement(this.el);
-            stopPropagation(e);
+            stopPropagation(<any>e);
         })
         $(document).on('dragover', (e) => {
             if (!this.dragging) return;
-            stopPropagation(e);
+            stopPropagation(<any>e);
         });
     }
 

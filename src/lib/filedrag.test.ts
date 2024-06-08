@@ -1,5 +1,5 @@
 import FileDrag from './filedrag';
-import {describe,it,expect,vi} from 'vitest';
+import {describe,it,expect,jest} from '@jest/globals';
 
 declare global {
     interface Window {
@@ -110,7 +110,7 @@ describe('FileDrag class tests', () => {
 
     it('triggers the event as expected when a file is dropped', () => {
         const child = createBaseDOM();
-        const dropFunction = vi.fn((files: File) => {
+        const dropFunction = jest.fn((files: File) => {
             const myFile = files;
             expect(myFile).toBeDefined();
             expect(myFile.name).toBe('test.txt');
